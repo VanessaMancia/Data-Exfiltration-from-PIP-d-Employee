@@ -107,6 +107,7 @@ Mitigate any confirmed threats.
 - All findings were escalated to Jane's manager for HR handling.  
 - No evidence of data exfiltration was found.  
 - Recommended monitoring of Jane's device for further activity.
+- Implement DLP (Data Loss Prevention) methods to alert on data exfiltration attempts. 
 
 ---
 
