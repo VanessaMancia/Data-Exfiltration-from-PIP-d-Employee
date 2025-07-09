@@ -12,7 +12,7 @@ Jane Doe, a potential insider threat, was placed on a Performance Improvement Pl
 Set up the hunt by defining what you're looking for.
 
 ### Scenario:
-An employee named Jane Doe, working in a sensitive department, was placed on a performance improvement plan (PIP). After exhibiting emotional behavior, management became concerned that John might attempt to exfiltrate proprietary information.
+An employee named Jane Doe, working in a sensitive department, was placed on a performance improvement plan (PIP). After exhibiting emotional behavior, management became concerned that Jane might attempt to exfiltrate proprietary information.
 
 ### Hypothesis:
 Jane has admin rights on her corporate device `nessa-windows`, including unrestricted PowerShell usage. She may compress and archive files and upload them to an external source.
