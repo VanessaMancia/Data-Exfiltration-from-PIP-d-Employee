@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project documents a cybersecurity incident response simulation involving a suspected insider threat. A user placed on a performance improvement plan was observed exhibiting behavior that could indicate data exfiltration. The investigation was conducted using **Microsoft Defender for Endpoint (MDE)** data tables to identify, analyze, and respond to suspicious file archiving activity.
+This project documents a cybersecurity incident response simulation involving a suspected insider threat. A user placed on a performance improvement plan (PIP) was observed exhibiting behavior that could indicate data exfiltration. The investigation was conducted using **Microsoft Defender for Endpoint (MDE)** data tables to identify, analyze, and respond to suspicious file archiving activity.
 
 ---
 
@@ -12,10 +12,10 @@ This project documents a cybersecurity incident response simulation involving a 
 Set up the hunt by defining what you're looking for.
 
 ### Scenario:
-An employee named John Doe, working in a sensitive department, was placed on a performance improvement plan (PIP). After exhibiting emotional behavior, management became concerned that John might attempt to exfiltrate proprietary information.
+An employee named Jane Doe, working in a sensitive department, was placed on a performance improvement plan (PIP). After exhibiting emotional behavior, management became concerned that John might attempt to exfiltrate proprietary information.
 
 ### Hypothesis:
-John has admin rights on his corporate device `alex-mde-test`, including unrestricted PowerShell usage. He may compress and archive files and upload them to an external source.
+Jane has admin rights on his corporate device `nessa-windows`, including unrestricted PowerShell usage. He may compress and archive files and upload them to an external source.
 
 ---
 
@@ -59,7 +59,7 @@ Analyze data to test your hypothesis.
 - 7-Zip was used to archive employee data.
 
 ```kql
-let VMName = "alex-mde-test";
+let VMName = "nessa-windows";
 let specificTime = datetime(2025-04-09T22:17:16.6780857Z);
 DeviceProcessEvents
 | where Timestamp between ((specificTime - 2m) .. (specificTime + 2m))
@@ -77,7 +77,7 @@ No signs of external data transfer found in `DeviceNetworkEvents`.
 ```kql
 DeviceNetworkEvents
 | where Timestamp between ((specificTime - 2m) .. (specificTime + 2m))
-| where DeviceName == "alex-mde-test"
+| where DeviceName == "nessa-windows"
 | order by Timestamp desc
 ```
 
