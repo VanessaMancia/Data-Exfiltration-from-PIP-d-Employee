@@ -59,15 +59,14 @@ Analyze data to test your hypothesis.
 
 ```kql
 let VMName = "nessa-windows";
-let specificTime = datetime(2025-04-09T22:17:16.6780857Z);
+let specificTime = datetime(22025-07-09T22:09:37.7116195Z);
 DeviceProcessEvents
 | where Timestamp between ((specificTime - 2m) .. (specificTime + 2m))
 | where DeviceName == VMName
 | order by Timestamp desc
 ```
 
-![image](https://github.com/user-attachments/assets/fb819125-c06e-454d-bd19-3261f9af6124)
-
+![image](https://github.com/user-attachments/assets/8348dfa3-824f-4daa-91c4-2f900181ca9e)
 
 ### Exfiltration Check
 
