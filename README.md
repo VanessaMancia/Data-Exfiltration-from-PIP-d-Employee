@@ -104,9 +104,9 @@ Investigate any suspicious findings.
 Mitigate any confirmed threats.
 
 ### Actions Taken
-- All findings were escalated to John’s manager for HR handling.  
+- All findings were escalated to Jane's manager for HR handling.  
 - No evidence of data exfiltration was found.  
-- Recommended monitoring of John’s device for further activity.
+- Recommended monitoring of Jane's device for further activity.
 
 ---
 
