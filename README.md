@@ -36,13 +36,12 @@ Located multiple instances of ZIP file creation and movement to a `backup` direc
 
 ```kql
 DeviceFileEvents
-| where DeviceName == "alex-mde-test"
+| where DeviceName == "nessa-windows"
 | where FileName contains "zip"
 | sort by Timestamp desc
 ```
 
-![image](https://github.com/user-attachments/assets/933d7187-0f16-4afc-8ac4-b9272bc65ba5)
-
+![image](https://github.com/user-attachments/assets/88f85eb0-3029-42a2-a826-ef7c425a26c2)
 
 ---
 
